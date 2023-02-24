@@ -1,19 +1,19 @@
-// const getItems = () => {
+const getItems = () => {
 
-// }
+}
 
-// const getItem = () => {
+const getItem = () => {
 
-// }
+}
 
-// const createItem = () => {
+const createItem = () => {
 
-// }
+}
 
-// const updateItem = () => {
+const updateItem = () => {
 
-// }
+}
 
-// const deleteItem = () => {
+const deleteItem = () => {
 
-// }
+}

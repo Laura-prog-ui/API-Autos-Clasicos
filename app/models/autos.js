@@ -31,4 +31,4 @@ const autosSchema = new mongoose.Schema({
     versionKey: false // delete V
 })
 
-module.exports = mongoose.model('test', autosSchema);
+module.exports = mongoose.model('autos', autosSchema);

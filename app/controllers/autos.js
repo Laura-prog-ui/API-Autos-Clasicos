@@ -28,9 +28,9 @@ const getItem = async (req, res) => {
 
 const createItem = async (req, res) => {
     try {
-        const { name, img, ramsar, location, departments, ha } = req.body
+        const { img_url, brand, age, model, country, description } = req.body
         const resDetail = await userModel.create({
-            name, img, ramsar, location, departments, ha
+            img_url, brand, age, model, country, description
         })
         res.send({ data: resDetail })
     } catch (e) {
@@ -42,10 +42,10 @@ const createItem = async (req, res) => {
 const updateItem = async (req, res) => {
   try {
     const itemId = req.params.id;
-    const { name, img, ramsar, location, departments, ha } = req.body;
+    const { img_url, brand, age, model, country, description } = req.body;
     const item = await userModel.findByIdAndUpdate(
       itemId,
-      { name, img, ramsar, location, departments, ha },
+      { img_url, brand, age, model, country, description },
       { new: true }
     );
     if (!item) {

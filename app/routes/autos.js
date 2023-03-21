@@ -1,6 +1,6 @@
 const express = require("express")
 const router = express.Router()
-const { getItems, getItem, createItem, deleteItem, updateItem } = require('../controlles/autos')
+const { getItems, getItem, createItem, deleteItem, updateItem } = require('../controllers/autos')
 
 router.get('/',  getItems)
 

@@ -52,7 +52,7 @@ router.get('/' , getItems)
  * /{id}:
  *  get:
  *    sumary: return one autos
- *    tags: autosapi]
+ *    tags: [autosapi]
  *    parameters:
  *    - in: path
  *      name: id

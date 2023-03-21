@@ -2,7 +2,7 @@ const mongoose = require("mongoose");
 
 const autosSchema = new mongoose.Schema({
 
-    image_url: {
+    img_url: {
         type: String
     },
 

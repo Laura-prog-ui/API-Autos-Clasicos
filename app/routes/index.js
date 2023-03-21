@@ -1,6 +1,6 @@
-const epxress = require('express')
-const router = epxress.Router()
-const fs = require('fs')
+const epxress = require('express');
+const router = epxress.Router();
+const fs = require('fs');
 
 const pathRouter = `${__dirname}`
 
@@ -12,7 +12,7 @@ fs.readdirSync(pathRouter).filter((file) => {
     const fileWithOutExt = removeExtension(file)
     const skip = ['index'].includes(fileWithOutExt)
     if (!skip) {
-        router.use(`/${fileWithOutExt}`, require(`./${fileWithOutExt}`)) //TODO: localhost/users
+        router.use(`/${fileWithOutExt}`, require(`./${fileWithOutExt}`)) //TODO: localhost/humedales
         console.log('CARGAR RUTA ---->', fileWithOutExt)
     }
 })
@@ -23,4 +23,4 @@ router.get('*', (req, res) => {
 })
 
 
-module.exports = router
+module.exports = router

@@ -1,31 +1,34 @@
 const mongoose = require("mongoose");
 
-const autosSchema = mongoose.Schema({
+const autosSchema = new mongoose.Schema({
 
     image_url: {
-        type: String,
-        required: true
+        type: Strings
     },
 
     brand: {
-        type: String,
-        required: true
+        type: String
     },
 
     age:{
-        type: Number,
-        required: true
+        type: Number
     },
 
     model:{
-        type:String,
-        required: true
+        type:String
     },
 
     country:{
-        type: String,
-        required: true 
-    }
-});
+        type: String
+    },
+
+    description:{
+        type: String
+    },
+},
+{
+    timestamps: true, // create date
+    versionKey: false // delete V
+})
 
 module.exports = mongoose.model('test', autosSchema);

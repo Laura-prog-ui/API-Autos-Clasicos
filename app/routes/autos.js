@@ -1,13 +1,12 @@
 const express = require("express")
 const router = express.Router()
-const checkOrigin = require('../middleware/origin')
 const { getItems, getItem, createItem, deleteItem, updateItem } = require('../controlles/autos')
 
-router.get('/', checkOrigin,  getItems)
+router.get('/',  getItems)
 
-router.get('/:id', checkOrigin, getItem)
+router.get('/:id', getItem)
 
-router.post('/', checkOrigin, createItem)
+router.post('/', createItem)
 
 router.patch('/:id', updateItem)
 
